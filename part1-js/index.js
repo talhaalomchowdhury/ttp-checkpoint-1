@@ -29,39 +29,58 @@
 // ------------------------------------------------------------
 console.log("[ SECTION A — Variables & Math ]")
 
-
 // A1.
 // Declare a variable using const and assign it the number 100.
 // Declare a variable using let and assign it the number 45.
 // Log both.
 
+const num1 = 100;
+let num2 = 45;
+console.log(num1);
+console.log(num2);
 
 // A2.
 // Using only those two variables, write a single expression that adds them,
 // subtracts 20, multiplies by 2, and divides by 5.
 // Log the result.
 
+let result = ((((num1 + num2) - 20) * 2) / 5);
+console.log(result);
 
 // A3.
 // Reassign your let variable to a different number. Log it.
 // Now try to reassign your const variable. What happens?
-//
+// 
+// num2 = 50;
+// console.log(num2);
+// num1 = 90;
+// console.log(num1);
+// TypeErro !!!!!!
 // EXPLAIN: What is the difference between let and const?
 //          Write your answer as a comment below.
 //
-//          answer:
+//          answer: Let declare a regular variable that we can change the value later if needed.
+// const declare a variable that we can not change later.
 
 
 // A4.
 // Using the % operator, write an expression that tells you
 // whether the number 47 is even or odd.
 // Log the result and a message that says "even" or "odd".
+let num = 47;
+if (num % 2 === 0) {
+  console.log("even");
+}
+else {
+  console.log("odd");
+};
 //
 // EXPLAIN: What does the % operator return?
 //          Why is it useful for checking even/odd?
 //
-//          answer:
-
+//          answer: 1. % return the remainder.
+// 2. after devidin by 2 if the remainder is 0 then even. 
+// otherwise odd; the % operator return the remainder.
 
 // ------------------------------------------------------------
 // SECTION B — Strings (reference to string methods: https://www.w3schools.com/jsref/jsref_obj_string.asp)
@@ -74,32 +93,38 @@ const rawInput = "   JavaScript is AWESOME   "
 
 // B1.
 // Log the string with all leading and trailing spaces removed (extra spaces in front and end of the text).
-
+console.log(rawInput.trim());
 
 // B2.
 // Log the string converted to all lowercase.
 
+console.log(rawInput.toLowerCase());
 
 // B3.
 // Log the number of characters in rawInput (including spaces).
-
+console.log(rawInput.length);
 
 // B4.
 // Log whether rawInput contains the word "awesome" (lowercase).
 // It should return true.
 
 
+let check = rawInput.toLowerCase().includes("awesome");
+console.log(check);
+
 // B5.
 // Log the first 10 characters of rawInput.
-
+console.log(rawInput.slice(0, 10))
 
 // B6.
 // Split rawInput (after trimming it) into an array of individual words.
 // Log the resulting array.
+console.log(rawInput.trim().split(" "));
 //
 // EXPLAIN: What does .split() do? What argument did you pass it and why?
 //
-//        answer: 
+//        answer: .split() split the strings by the argument. I passed 
+// a single space so that it split after spaces.
 
 
 // ------------------------------------------------------------
@@ -117,7 +142,8 @@ const scores = [88, 72, 95, 60, 84, 100, 73, 91]
 // C1.
 // Log the first score. Log the last score.
 // Do not hardcode the index for the last one.
-
+console.log(scores[0]);
+console.log(scores[7]);
 
 // C2.
 // Log the total number of scores we see in the array.
@@ -225,10 +251,10 @@ console.log("\n[ SECTION E — Arrays of Objects ]")
 
 // The following array is provided for this section.
 const roster = [
-  { name: "Alex",  grade: 92, present: true  },
+  { name: "Alex", grade: 92, present: true },
   { name: "Jamie", grade: 74, present: false },
-  { name: "Jane",grade: 88, present: true  },
-  { name: "Riley", grade: 61, present: true  },
+  { name: "Jane", grade: 88, present: true },
+  { name: "Riley", grade: 61, present: true },
   { name: "Casey", grade: 95, present: false }
 ]
 
@@ -311,7 +337,7 @@ console.log(sum([]))                 // → 0
 // It should not return anything.
 // Do not use the native .forEach() inside your function — use a for loop.
 //
-myForEach([1, 2, 3], function(n) {
+myForEach([1, 2, 3], function (n) {
   console.log(n)
 })
 // → 1
