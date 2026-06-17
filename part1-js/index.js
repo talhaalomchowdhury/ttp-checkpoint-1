@@ -143,56 +143,66 @@ const scores = [88, 72, 95, 60, 84, 100, 73, 91]
 // Log the first score. Log the last score.
 // Do not hardcode the index for the last one.
 console.log(scores[0]);
-console.log(scores[7]);
+console.log(scores[scores.length-1]);
 
 // C2.
 // Log the total number of scores we see in the array.
 
+console.log(scores.length);
 
 // C3.
 // Use a method to mutate and add the number 78 to the end of the array.
 // Log the updated array.
-
+scores.push(78);
+console.log(scores);
 
 // C4.
 // Use a method to log the index of the score 95.
 // Log the index.
-
+console.log(scores.indexOf(95));
 
 // C5.
 // Use a method to log whether the array includes the score 50.
 // Log the boolean value.
-
+console.log(scores.includes(50))
 
 // C6.
 // Use a for loop to log each score on its own line.
 // Do not modify the original scores array.
-
+for(let i = 0; i < scores.length; i++){
+  console.log(scores[i])
+}
 
 // C7.
 // Use .forEach() to log each score on its own line.
 // Do not modify the original scores array.
-//
+scores.forEach(score => {
+  console.log(score)
+})
 // EXPLAIN: What is the difference between a for loop and forEach?
 //          Is one better than the other?
-//
+// They are almost same. Only the difference is on for loop we need to read all the 
+// value manually but on .forEach it read the value buy itself.
 
 
 // C8.
 // Use .filter() to create a new array containing only the scores above 80.
 // Log the new result array.
 // Do not modify the original scores array.
-
+const newScores = scores.filter( score => score > 80);
+console.log(newScores);
 
 // C9.
 // Use .map() to create a new array where every score is multiplied by 2.
 // Log the new result array.
 // Do not modify the original scores array.
-//
+const multipliedscores = scores.map(score => score*2);
+console.log(multipliedscores)
 // EXPLAIN: What does .map() return? What does .filter() return?
 //          How are they different?
 //
-//          answer:
+//          answer: map return the same sized array with chnaged value but
+// filter return specific value following the condition.
 
 
 
@@ -214,27 +224,31 @@ const student = {
 // D1.
 // Log the value of name using dot notation.
 // Log the value of city using bracket notation.
-
+console.log(student.name)
+console.log(student ['city'])
 
 // D2.
 // Add a new key called grade and set it to "B+".
 // Log the updated object.
-
+student.grade = "B+"
+console.log(student)
 
 // D3.
 // Use a method to log all of the keys in the object.
-
+console.log(Object.keys(student))
 
 // D4.
 // Use a method to log all of the values in the object.
-
+console.log(Object.values(student))
 
 // D5.
 // Using a for...in loop, log each key-value pair in this exact format:
 //   name: Jane
 //   age: 21
 //   (etc.)
-
+for(const key in student){
+  console.log(key + ":", student[key])
+}
 
 // D6.
 // EXPLAIN: What is the difference between dot notation and bracket notation?
