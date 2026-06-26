@@ -7,32 +7,42 @@
   Answer EXPLAIN prompts as CSS comments directly below the relevant rule.
 */
 
-
 /*
   TASK A
   Using the body TAG selector, set a background color on the page.
 */
-
+body {
+  background-color: lightblue;
+}
 
 /*
   TASK B
   Using the h1 TAG selector, set a font size and a color.
 */
-
+h1 {
+  font-size: 35px;
+  color: aliceblue;
+}
 
 /*
   TASK C
   Using the CLASS selector, style the list items with the highlight class.
   Give them a background color and some padding so they stand out.
 */
-
+.highlight {
+  background-color: lightgreen;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
 
 /*
   TASK D
   Using the ID selector, give the h2 with the id section-title a color that is
   different from the h1 and different from body text.
 */
-
+#section-title {
+  color: red;
+}
 
 /*
   TASK E
@@ -49,7 +59,13 @@
 
            answer:
 */
-
+#box {
+  width: 200px;
+  height: 200px;
+  padding: 15px;
+  border: 2px green;
+  margin: 20px;
+}
 
 /*
   TASK F
@@ -57,7 +73,15 @@
   It must have a background color, a text color, a border, padding,
   and a cursor: pointer that turns into a pointer when the user hovers over it.
 */
-
+#click-me {
+  background-color: white;
+  color: red;
+  border: 2px solid rgb(67, 2, 232);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
 
 /*
   TASK G — Specificity
@@ -72,5 +96,12 @@
            What is CSS specificity and how does it determine which rule wins?
            Write your answer as a comment below these two rules.
 
-           answer:
+           answer: Id selector.
 */
+p {
+  color: slateblue;
+}
+
+#intro {
+  color: tomato;
+}

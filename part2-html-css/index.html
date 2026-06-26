@@ -54,10 +54,39 @@
         Both rules target the same paragraph.
         Which color will the paragraph actually be? Why does one rule win?
 
-        Answer:
+        Answer: Second one is selecting an id. and an id is an unique and it specify an elements.
 
 -->
 
 <!-- ============================================================ -->
 <!-- Write your complete HTML page starting below this line      -->
 <!-- ============================================================ -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> </title>
+
+    <link rel="stylesheet" href="look.css" />
+  </head>
+  <body>
+    <h1>My Checkpoint Page</h1>
+    <p id="intro">This the intro of my checkpoint. It contains two sentences</p>
+    <h2 id="section-title">Solving Part two from checkpoint 1</h2>
+    <ul>
+      <li class="highlight">This is the first item</li>
+      <nav>
+        An id is a unique identifier. its target a single and specific item.
+        can't be share between two items
+      </nav>
+      <li>This is the second item</li>
+      <nav>A class is a group identifier. Can be share between two items</nav>
+      <li class="highlight">This is the third item</li>
+      <li>This is the fourth item</li>
+    </ul>
+
+    <div id="box">This is a short text</div>
+    <br />
+    <button id="click-me">Click Me</button>
+  </body>
+</html>

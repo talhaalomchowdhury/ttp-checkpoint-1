@@ -8,11 +8,10 @@
 //   - Answer EXPLAIN prompts as comments directly below each one
 // ============================================================
 
-
 // ------------------------------------------------------------
 // SECTION A — Selecting Elements
 // ------------------------------------------------------------
-console.log("[ SECTION A — Selecting Elements ]")
+console.log("[ SECTION A — Selecting Elements ]");
 
 // A1.
 // Use getElementById to select the following elements.
@@ -23,6 +22,12 @@ console.log("[ SECTION A — Selecting Elements ]")
 //   the p that shows the page status
 //   the unordered list
 
+const mainHeading = document.getElementById("main-heading");
+const statusSubTitle = document.getElementById("subtitle");
+const unorderedList = document.getElementById("item-list");
+console.log(mainHeading);
+console.log(statusSubTitle);
+console.log(unorderedList);
 
 // A2.
 // Use querySelector to select the following elements.
@@ -31,50 +36,66 @@ console.log("[ SECTION A — Selecting Elements ]")
 //   the h2 — select it by its tag name
 //   the "Toggle Highlight" button — select it by its id (look at index.html to find it)
 //   a list item — select it by its class (look at index.html to find the class name)
-
+const listHeading = document.querySelector("h2");
+const togglebtn = document.querySelector("#toggle-btn");
+const listItem = document.querySelector(".list-item");
+console.log(listHeading);
+console.log(togglebtn);
+console.log(listItem);
 
 // A3.
 // Use querySelectorAll to select all elements with the class "list-item".
 // Store the result in a variable and log it.
 
+const allItem = document.querySelectorAll(".list-item");
+console.log(allItem);
 
 // A4.
 // Use querySelectorAll to select all elements with the class "list-item".
 // Loop over the result and log the text content of each one.
 //
 // Note: the result is a NodeList, not a plain array.
+const allItems = document.querySelectorAll(".list-item");
 
+allItems.forEach(function (item) {
+  console.log(item.textContent);
+});
 
 // A5.
 // EXPLAIN: What is the difference between getElementById and querySelector?
 //          What does querySelectorAll return?
 //          How is that different from a regular array?
 //
-//          answer:
-
+//          answer: 1. getElementByID Only selects elements by the id where queryselector can select by tag, class or id.
+// 2. queryselectorall returns a list of all matching elements.
+//                     3.
 
 // ------------------------------------------------------------
 // SECTION B — Reading and Changing the DOM
 // ------------------------------------------------------------
-console.log("\n[ SECTION B — Reading and Changing the DOM ]")
+console.log("\n[ SECTION B — Reading and Changing the DOM ]");
 
 // B1.
 // Select the h1 with the id "main-heading" and log its text content.
-
+const mainHeadB1 = document.querySelector("#main-heading");
+console.log(mainHeadB1.textContent);
 
 // B2.
 // Select the p with the id "subtitle" and change its text to "Page loaded successfully."
 // This should happen as soon as the page loads — not on a click.
-
+const subtitlePara = document.querySelector("#subtitle");
+subtitlePara.textContent = "Page loaded successfully.";
 
 // B3.
 // Select the p with the id "output-text" and change its text to anything you choose.
-
+const outputParaB3 = document.querySelector("#output-text");
+outputParaB3.textContent = "Hello from JavaScript!";
 
 // B4.
 // Select the div with the id "output-box" and give it a background color of your choice.
 // Do this with JavaScript — not by editing the CSS file.
-
+const outputBoxB4 = document.querySelector("#output-box");
+outputBoxB4.style.backgroundColor = "lightblue";
 
 // B5.
 // EXPLAIN: What is textContent?
@@ -83,22 +104,19 @@ console.log("\n[ SECTION B — Reading and Changing the DOM ]")
 //
 //          answer:
 
-
 // ------------------------------------------------------------
 // SECTION C — Responding to Events
 // ------------------------------------------------------------
-console.log("\n[ SECTION C — Responding to Events ]")
+console.log("\n[ SECTION C — Responding to Events ]");
 
 // C1.
 // Add a click listener to the button with the id "change-btn".
 // When clicked, change the text of the h1 with the id "main-heading" to any text you choose.
 
-
 // C2.
 // Add a click listener to the button with the id "toggle-btn".
 // When clicked, toggle the class "highlighted" on the p with the id "output-text".
 // Add it if it is not there. Remove it if it is.
-
 
 // C3.
 // Select the h1 with the id "main-heading" and add the class "active" to it.
@@ -108,14 +126,12 @@ console.log("\n[ SECTION C — Responding to Events ]")
 // Remove that class from it.
 // Log its class list to confirm the class is gone.
 
-
 // C4.
 // EXPLAIN: What is an event listener?
 //          Why can't you write the code outside of a function
 //          and expect it to run when the button is clicked?
 //
 //          answer:
-
 
 // C5.
 // EXPLAIN: What does classList.toggle do?
@@ -124,18 +140,16 @@ console.log("\n[ SECTION C — Responding to Events ]")
 //
 //          answer:
 
-
 // ------------------------------------------------------------
 // SECTION D — Creating and Adding to the DOM
 // ------------------------------------------------------------
-console.log("\n[ SECTION D — Creating and Adding to the DOM ]")
+console.log("\n[ SECTION D — Creating and Adding to the DOM ]");
 
 // D1.
 // Create a new li element.
 // Set its text content to any item you choose.
 // Give it the class "list-item".
 // Append it to the ul with the id "item-list".
-
 
 // D2.
 // Add a click listener to the button with the id "add-btn".
@@ -146,11 +160,9 @@ console.log("\n[ SECTION D — Creating and Adding to the DOM ]")
 //   - Append it to the ul with the id "item-list"
 //   - Clear the input field after
 
-
 // D3.
 // Select the p with the id "output-text" and remove it from the page entirely.
 // After this runs, the element should no longer be visible.
-
 
 // D4.
 // EXPLAIN: What does createElement do?
@@ -158,4 +170,3 @@ console.log("\n[ SECTION D — Creating and Adding to the DOM ]")
 //          When does the newly created element actually appear on the page?
 //
 //          answer:
-
